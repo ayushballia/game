@@ -172,7 +172,9 @@ function buyWeapon() {
   }
 }
 
-function goTown() {}
+function goTown() {
+  update(locations[0])
+}
 
 function fightSlime() {
   fighting = 0;
@@ -209,7 +211,7 @@ function goFight() {
   monsterStats.style.display = "block";
 
   monsterName.innerText = monsters[fighting].name;
-  monsterHealthText = monsterHealth;
+  monsterHealthText.innerText = monsterHealth;
 }
 
 function attack() {
